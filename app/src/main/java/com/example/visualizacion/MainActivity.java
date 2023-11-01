@@ -2,6 +2,7 @@ package com.example.visualizacion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText dataAno;
     TextView resultSet;
       Button btn;
-  ImageView img;
+       Button botao;
+      ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultSet=findViewById(R.id.textView3);
        btn=findViewById(R.id.butnCalcula);
        btn.setOnClickListener((android.view.View.OnClickListener)this);
-
+        botao=findViewById(R.id.button);
 
 
 
@@ -201,15 +203,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           if(semanas==42){
               Picasso.get().load("https://www.trocandofraldas.com.br/wp-content/uploads/40-semanas-de-gestacao-300x300.jpg").into(img);
           }
+    }
+   public void telaImc(View view){
+       Intent intent=new Intent(this,ActivityImc.class);
+       startActivity(intent);
 
-
-
-
-
-
-
-
-      }
-
+   }
 
 }
