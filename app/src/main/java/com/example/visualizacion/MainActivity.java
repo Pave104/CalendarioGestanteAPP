@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
    public void telaImc(View view){
        Intent intent=new Intent(this,ActivityImc.class);
+      intent.putExtra("semana",semanas);
        startActivity(intent);
 
    }
